@@ -13,6 +13,7 @@ namespace UserRegistrationProblem
         //LastNameValidation
         public static string REGEX_LASTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string REGEX_EMAILADDRESS = "^[a-zA-Z0-9]([._+-]{0,1}[a-zA-Z0-9])*[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-zA-Z]{2,3}([.]{1}[a-zA-Z]{2,3}){0,1}$";
+        public static string REGEX_PHONENUMBER = "^[9]{1}[1]{1}\\s[0-9]{10}$";
         public bool validateFirstname(string Firstname)
         {
             return Regex.IsMatch(Firstname, REGEX_FIRSTNAME);
@@ -25,6 +26,11 @@ namespace UserRegistrationProblem
         public bool validateEmailAddress(string EmailAddress)
         {
             return Regex.IsMatch(EmailAddress, REGEX_EMAILADDRESS);
+        }
+        //PhoneNumberValidation
+        public bool validatephonenumber(string phonenumber)
+        {
+            return Regex.IsMatch(phonenumber, REGEX_PHONENUMBER);
         }
     }
 }
