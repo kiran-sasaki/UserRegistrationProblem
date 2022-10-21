@@ -40,6 +40,14 @@
                 Console.WriteLine("Phn NO Matched");
             else
                 Console.WriteLine("Phn No not matched");
+
+            Console.WriteLine("please enter PassWord: ");
+            string Password = Console.ReadLine();
+            bool Pwd = regexProb.validatepassword(Password);
+            if (Pwd)
+                Console.WriteLine("Password Matched");
+            else
+                Console.WriteLine("Password not matched");
         }
     }
 }
